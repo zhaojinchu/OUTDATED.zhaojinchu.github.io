@@ -19,12 +19,12 @@ phone: +971 58 188 6719
 
 # social media links
 social:
-  facebook: username
+  #facebook: username
   github: zhaojinchu
-  instagram: username
+  #instagram: username
   linkedin: zhaojin-chu-ab0184287
   stackoverflow: 33251512/zhaojin-chu
-  x: username
+  #x: username
 
 # build settings
 permalink: pretty
