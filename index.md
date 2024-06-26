@@ -12,6 +12,10 @@ title: Home
 
 Hi all, I'm Zhaojin, a {{ diffDays | round: 0 }} year old student studying at Dubai College. I play tennis, listen to music, and practice music on my two instruments: piano and viola. For all other times, you can find me working on my projects and programming code. 
 
+My interests include web dev, artificial intelligence, processor architectures, hardware simulations, and learning about completely new things once in a while. 
+
+I do most of my programming in python, with proficiency in html, css, and VHDL. I also have experience with KiCad, schematics, and dabbled with PCB layouts and printing.
+
 
 # Projects
 {% include projects.html %}
