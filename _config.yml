@@ -1,29 +1,29 @@
 title: Zhaojin Chu
-description: Bio and About Me
+description: Personal Website
 baseurl: ""
 url: https://zhaojinchu.github.io/
 
 theme: cvless
 
 # site settings
-taglong: Jekyll theme for a beautiful online CV
-tagshort: Jekyll theme
+taglong: Student at Dubai College
+tagshort: 
 
 # author settings
 author:
-  name: Place Holder
-  email: username@domain.com
+  name: Zhaojin Chu
+  email: zhaojin.chu07@gmail.com
 photo: assets/files/photo.jpg
-address: Foobar Hall 1.23
-phone: +1 234 567 890
+address: 
+phone: +971 58 188 6719
 
 # social media links
 social:
   facebook: username
-  github: username
+  github: zhaojinchu
   instagram: username
-  linkedin: username
-  stackoverflow: 0000000/username
+  linkedin: zhaojin-chu-ab0184287
+  stackoverflow: 33251512/zhaojin-chu
   x: username
 
 # build settings
@@ -32,3 +32,8 @@ exclude:
   - docker-compose.yml
   - LICENSE
   - README.md
+
+# setting default paths
+defaults:
+  - scope:
+      path: "assets/"
