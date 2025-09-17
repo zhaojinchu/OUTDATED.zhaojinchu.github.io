@@ -1,30 +1,32 @@
 title: Zhaojin Chu
-description: Personal Website
+description: Building human-centered AI systems, resilient hardware, and joyful learning experiences.
 baseurl: ""
 url: https://zhaojinchu.github.io/
 
 theme: cvless
 
 # site settings
-taglong: Student at Dubai College
-tagshort: 
+taglong: Electrical & Computer Engineering @ Carnegie Mellon University
+tagshort: ECE @ Carnegie Mellon
 
 # author settings
 author:
   name: Zhaojin Chu
-  email: zhaojin.chu07@gmail.com
+  email: zhaojinc@andrew.cmu.edu
 photo: assets/files/photo.jpg
-address: 
-phone: +971 58 188 6719
+address:
+phone: +1 (412) 657-5072
 
 # social media links
 social:
-  #facebook: username
   github: zhaojinchu
-  #instagram: username
-  linkedin: zhaojin-chu-ab0184287
+  linkedin: zhaojinc
   stackoverflow: 33251512/zhaojin-chu
-  #x: username
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:slug/
 
 # build settings
 permalink: pretty
@@ -33,7 +35,13 @@ exclude:
   - LICENSE
   - README.md
 
-# setting default paths
 defaults:
   - scope:
-      path: "assets/"
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: "assets/files"
+    values:
+      sitemap: false
