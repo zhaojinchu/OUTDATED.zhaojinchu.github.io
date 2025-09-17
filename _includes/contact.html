@@ -1,9 +1,39 @@
-<div class="contact">
-    <h2>Zhaojin Chu</h2>
-    <ul>
-      <li><span class="li-icon">{% include svg/phone.svg %}</span><span>{{ site.phone }}</span></li>
-      <li><span class="li-icon">{% include svg/mail.svg %}</span><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-      <li><span class="li-icon">{% include svg/internet.svg %}</span><a href="{{ site.url }}">{{ site.url }}</a></li>
-    </ul>
+<div class="contact-card">
+  <h2 class="contact-card__title">Let's build something together</h2>
+  <p class="contact-card__subtitle">
+    I love collaborating on research-backed products, education initiatives, and performance projects that bring people closer to
+    technology. Drop me a note and let's explore what we can create.
+  </p>
+  <ul class="contact-card__list">
+    <li>
+      <span class="contact-card__label">Email</span>
+      <span class="contact-card__value"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
+    </li>
+    {% if site.phone %}
+    <li>
+      <span class="contact-card__label">Phone</span>
+      <span class="contact-card__value"><a href="tel:{{ site.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{{ site.phone }}</a></span>
+    </li>
+    {% endif %}
+    <li>
+      <span class="contact-card__label">Current base</span>
+      <span class="contact-card__value">Pittsburgh, PA &middot; Dubai, UAE</span>
+    </li>
+  </ul>
+  <div class="contact-card__social">
+    {% if site.social.linkedin %}
+    <a class="pill-link" href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+    {% endif %}
+    {% if site.social.github %}
+    <a class="pill-link" href="https://github.com/{{ site.social.github }}" target="_blank" rel="noreferrer">GitHub</a>
+    {% endif %}
+    {% if site.social.stackoverflow %}
+    <a
+      class="pill-link"
+      href="https://stackoverflow.com/users/{{ site.social.stackoverflow }}"
+      target="_blank"
+      rel="noreferrer"
+    >Stack Overflow</a>
+    {% endif %}
   </div>
-  
+</div>
