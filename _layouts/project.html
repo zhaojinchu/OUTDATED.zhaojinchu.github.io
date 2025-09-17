@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<article class="project-page">
+  {% include header.html %}
+  <main>
+    <a class="project__back" href="{{ '/projects' | relative_url }}">&larr; Back to projects</a>
+    <header class="project__header">
+      {% if page.category %}<p class="project__eyebrow">{{ page.category }}</p>{% endif %}
+      <h1 class="project__title">{{ page.title }}</h1>
+      {% if page.lead %}<p class="project__lead">{{ page.lead }}</p>{% endif %}
+      <ul class="project__meta">
+        {% if page.timeline %}
+        <li>
+          <strong>Timeline</strong>
+          <span>{{ page.timeline }}</span>
+        </li>
+        {% endif %}
+        {% if page.role %}
+        <li>
+          <strong>Role</strong>
+          <span>{{ page.role }}</span>
+        </li>
+        {% endif %}
+        {% if page.partner %}
+        <li>
+          <strong>Collaborators</strong>
+          <span>{{ page.partner }}</span>
+        </li>
+        {% endif %}
+        {% if page.skills %}
+        <li>
+          <strong>Toolkit</strong>
+          <span>{{ page.skills | join: ' · ' }}</span>
+        </li>
+        {% endif %}
+        {% if page.location %}
+        <li>
+          <strong>Location</strong>
+          <span>{{ page.location }}</span>
+        </li>
+        {% endif %}
+      </ul>
+      {% if page.links %}
+      <div class="project__links">
+        {% for link in page.links %}
+        <a class="pill-link" href="{{ link.url | relative_url }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </header>
+    <div class="project__content">
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</article>
